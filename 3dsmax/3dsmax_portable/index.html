@@ -96,13 +96,88 @@
 
 <h1 id="making-3ds-max-portable">Making 3ds Max portable</h1>
 <h2 id="introduction">Introduction</h2>
+<p>With the release of 3ds Max 2022.3 Autodesk ships <strong><em>Robust Pipeline Integration</em></strong>.
+This mostly introduces the posibility to configure many of 3ds Max's paths through
+environment variables. This offers a lot of possibilities. This enables a lot of
+things impossible before, like loading plugins from arbitrary locations without
+plugin.ini by simply adding paths to an environment variable.</p>
+<p>Amongst the usual suspects there is also one very special easy to overlook new
+environment variable: <code>ADSK_3DSMAX_x64_&lt;year&gt;</code>. This enables setting the root 
+folder of 3ds Max and running it from arbitrary places. </p>
 <h3 id="pre-requisites-on-target-machines">Pre-Requisites on target machines</h3>
 <h4 id="installing-the-licensing-service-and-the-sso-component">Installing the licensing service and the SSO component</h4>
 <p>Here is the first paragraph</p>
 <p><code>Some multi line code block</code></p>
 <h4 id="registering-with-the-licensing-service">Registering with the licensing service</h4>
 <h3 id="setting-up-a-portable-environment-for-max">Setting up a portable environment for Max</h3>
-<h3 id="bonus-building-a-rez-package">Bonus: Building a rez package</h3></div>
+<h3 id="bonus-building-a-rez-package">Bonus: Building a rez package</h3>
+<h3 id="appendix-list-of-environment-variables-supported-as-of-20223">Appendix: List of environment variables supported as of 2022.3</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADSK_3DSMAX_x64_ <year></td>
+<td>The path to the 3ds Max install. Created by the installation process. On systems where 3ds Max was copied instead of installed, this variable needs to be defined manually.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_ APPDATA_DIR</td>
+<td>The path used by 3ds Max to read and write local user data. By default this location is C:\Users\<username>\AppData\Local\Autodesk\3dsMax\<year> - 64bit\<lang></td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_SCRIPTS_ADDON_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the <strong>Additional Scripts</strong> folder defined in the Configure User and System Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_STARTUPSCRIPTS_ADDON_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the <strong>Additional Startup Scripts</strong> folder defined in the Configure User and System Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_MACROS_ADDON_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the <strong>Additional Macros</strong> folder defined in the Configure User and System Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_ICONS_ADDON_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the <strong>Additional Icons</strong> folder defined in the Configure User and System Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_PLUGINS_ADDON_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the <strong>Additional MAX plug-ins</strong> folder defined in the Configure User and System Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_ASSETS_XREFS_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the Xrefs paths defined in the Configure Project Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_ASSETS_MAPS_DIR</td>
+<td>A list of semicolon-delimited paths, used in addition to the External Files paths defined in the Configure Project Paths dialog.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_PROJECT_FOLDER_DIR</td>
+<td>The path for the location for project data (such as material libraries, render presets, render output, etc). If this variable is defined but the specified folder does not exist, 3ds Max creates it. This envar takes precedence over the ProjectFolder value in 3dsmax.ini.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_USERSETTINGS_DIR</td>
+<td>The path for reading and writing user settings. If this variable is defined but the specified folder does not exist, 3ds Max creates it.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_SDK_<YEAR></td>
+<td>The fully-qualified path for the 3ds Max SDK, if installed.</td>
+</tr>
+<tr>
+<td>ADSK_3DSMAX_SESSION_LOG</td>
+<td>The path to the 3ds Max session log.</td>
+</tr>
+<tr>
+<td>ADSK_APPLICATION_PLUGINS</td>
+<td>A list of semicolon-delimited paths, specifying root folders from which to load additional 3rd party application plug-ins. Each folder can either contain a plug-in, or a collection of folders containing plug-ins.</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 
