@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>How to add a page to the Wiki - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/obsidian.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">3dsmax <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../3dsmax/3dsmax_portable/" class="dropdown-item">Making 3ds Max portable</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Taowiki <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../blender/" class="dropdown-item">Blender</a>
+</li>
+                                    
+<li>
+    <a href="../../coding/" class="dropdown-item">Coding</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Contribute to the Wiki</a>
+</li>
+                                    
+<li>
+    <a href="../../gdc/" class="dropdown-item">GDC Sessions</a>
+</li>
+                                    
+<li>
+    <a href="../../houdini/" class="dropdown-item">Houdini</a>
+</li>
+                                    
+<li>
+    <a href="../../math/" class="dropdown-item">Math</a>
+</li>
+                                    
+<li>
+    <a href="../../max/" class="dropdown-item">3ds Max</a>
+</li>
+                                    
+<li>
+    <a href="../../maya/" class="dropdown-item">Maya</a>
+</li>
+                                    
+<li>
+    <a href="../../pipelines/" class="dropdown-item">Pipelines</a>
+</li>
+                                    
+<li>
+    <a href="../../python3/" class="dropdown-item">Python3</a>
+</li>
+                                    
+<li>
+    <a href="../../rigging/" class="dropdown-item">Rigging</a>
+</li>
+                                    
+<li>
+    <a href="../../shaders/" class="dropdown-item">Shaders</a>
+</li>
+                                    
+<li>
+    <a href="../../ta-101/" class="dropdown-item">Tech Art 101</a>
+</li>
+                                    
+<li>
+    <a href="../../tips/" class="dropdown-item">Tips</a>
+</li>
+                                    
+<li>
+    <a href="../../tools/" class="dropdown-item">Tools</a>
+</li>
+                                    
+<li>
+    <a href="../../unity/" class="dropdown-item">Unity</a>
+</li>
+                                    
+<li>
+    <a href="../../unreal/" class="dropdown-item">Unreal</a>
+</li>
+                                    
+<li>
+    <a href="../../vfx/" class="dropdown-item">VFX</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contribute</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">How to add a page to the Wiki</a>
+</li>
+            
+<li>
+    <a href="../how_to_edit_page/" class="dropdown-item">How to edit a wiki page</a>
+</li>
+            
+<li>
+    <a href="../how_to_setup_dev_env/" class="dropdown-item">How to setup a development environment</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Houdini</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../houdini/houdini_hda_naming_conventions_without_sql_database/" class="dropdown-item">Houdini HDA Naming Conventions without a SQL database</a>
+</li>
+            
+<li>
+    <a href="../../houdini/houdini_setting_up_a_studio_environment/" class="dropdown-item">Houdini Setting up a studio environment</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Max</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../max/pymxs_helpful_snippets/" class="dropdown-item">pymxs Helpful Snippets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Python3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python3/python3-snippets/" class="dropdown-item">Python3 Snippets</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Python3 snippets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python3/python3-snippets/extract_icon_from_exe/" class="dropdown-item">Py3 Extract icon from exe and save as png (with alpha)</a>
+</li>
+            
+<li>
+    <a href="../../python3/python3-snippets/latest_installed_program/" class="dropdown-item">Find Latest Installed Program on System</a>
+</li>
+            
+<li>
+    <a href="../../python3/python3-snippets/threaded_animation/" class="dropdown-item">Console: Threaded "WIP" animation</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ta 101</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ta-101/job-descriptions/" class="dropdown-item">Tech Art Job Descriptions</a>
+</li>
+            
+<li>
+    <a href="../../ta-101/ta-coding-101/" class="dropdown-item">Tech Art Coding 101</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Job descriptions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ta-101/job-descriptions/job-descriptions-film/" class="dropdown-item">Tech Art Job Descriptions in Film</a>
+</li>
+            
+<li>
+    <a href="../../ta-101/job-descriptions/job-descriptions-games/" class="dropdown-item">Tech Art Job Descriptions in Games</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Game ta disciplines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ta-101/job-descriptions/game-ta-disciplines/animation-n-rigging/" class="dropdown-item">Animation/Rigging Tech Art Job Description in Games</a>
+</li>
+            
+<li>
+    <a href="../../ta-101/job-descriptions/game-ta-disciplines/pipeline/" class="dropdown-item">Pipeline Tech Art Job Description in Games</a>
+</li>
+            
+<li>
+    <a href="../../ta-101/job-descriptions/game-ta-disciplines/shaders/" class="dropdown-item">Shaders Tech Art Job Description in Games</a>
+</li>
+            
+<li>
+    <a href="../../ta-101/job-descriptions/game-ta-disciplines/visual-effects/" class="dropdown-item">Visual Effects Tech Art Job Description in Games</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Unity</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../unity/drop_selected_model_to_ground/" class="dropdown-item">Drop Selected Model To Ground(or closest model below) (No Colliders Needed)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Unreal</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../unreal/how_to_make_an_actor_that_can_tick_in_editor/" class="dropdown-item">[Unreal] How to make an actor that can Tick In Editor</a>
+</li>
+            
+<li>
+    <a href="../../unreal/tickable_pyside2_window_baseclass/" class="dropdown-item">Tickable PySide2 Window BaseClass</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../vfx/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../how_to_edit_page/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            
+            <li class="nav-item" data-level="1"><a href="#things-to-note" class="nav-link">Things to note:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#steps-to-adding-a-page" class="nav-link">Steps to adding a page</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr />
+<h3 id="make-sure-you-have-followed-the-instructions-heretarget_blank-on-setting-up-your-development-environment">Make sure you have followed the instructions <a href="/contribute/how_to_setup_dev_env/">here</a>{:target="_blank"}  on setting up your development environment</h3>
+<hr />
+<p><br>
+<br></p>
+<h1 id="things-to-note">Things to note:</h1>
+<p><br></p>
+<h3 id="page-location">Page location</h3>
+<p>All of the pages need to be placed under <code>content/pages/</code></p>
+<p><br></p>
+<h3 id="page-format">Page format</h3>
+<p>All of the pages should use the following Markdown format:</p>
+<pre><code class="language-yaml">Title: &lt;NAME OF YOUR PAGE example: Python snippet for finding ...&gt;
+Date: &lt;DATE example: 01-01-20 16:40&gt; 
+Description: &lt;PAGE template type : wiki_branch_page OR wiki_leaf_page &gt;
+
+THE CONTENT OF THE PAGE...
+</code></pre>
+<p><br></p>
+<h3 id="page-template-types">Page template types</h3>
+<p><em>wiki_branch_page</em> - a page that contains a list of links to the child pages (example: <a href="techartorg.github.io/contribute">techartorg.github.io/contribute</a>{:target="_blank"} )</p>
+<p><em>wiki_leaf_page</em> - a page that contains information (example: this page)</p>
+<p><br>
+<br></p>
+<hr />
+<h1 id="steps-to-adding-a-page">Steps to adding a page</h1>
+<p><br></p>
+<h3 id="1-select-a-category-for-your-page">1) Select a category for your page</h3>
+<p>Select one of the existing categories to place your page under.</p>
+<p>Categories:</p>
+<ul>
+<li>blender</li>
+<li>coding</li>
+<li>contribute</li>
+<li>houdini</li>
+<li>math</li>
+<li>max</li>
+<li>maya</li>
+<li>pipelines</li>
+<li>python3</li>
+<li>rigging</li>
+<li>shaders</li>
+<li>tips</li>
+<li>tools</li>
+<li>unity</li>
+<li>unreal</li>
+<li>vfx</li>
+</ul>
+<hr />
+<p><br>
+<br></p>
+<h3 id="21-create-a-subcategory-markdown-file-and-folder-optional">2.1) Create a subcategory Markdown file and Folder <code>(optional)</code></h3>
+<p><br></p>
+<p>If you need to create a <code>subcategory</code> under the <code>category</code> you have selected, create a new Markdown file and a folder with the same name.</p>
+<p>Here is an example of creating a <code>python-tips</code> subcategory under the <code>python</code> category folder</p>
+<pre><code class="language-text">└── content/pages/
+    ├── python.md            #  python category Markdown file
+    └── python/              #  python category folder
+        ├── python-tips.md   #  {NEW} python-tips subcategory Markdown file
+        └── python-tips/     #  {NEW} python-tips subcategory folder
+</code></pre>
+<p>The Markdown file:</p>
+<ul>
+<li>should have the <code>Template</code> metadata set to <code>wiki_branch_page</code></li>
+<li>the body of the file should be empty</li>
+</ul>
+<pre><code class="language-yaml">Title: &lt;NAME OF YOUR PAGE example: Python snippet for finding ...&gt;
+Date: &lt;DATE example: 01-01-20 16:40&gt; 
+Description: wiki_branch_page
+
+</code></pre>
+<hr />
+<p><br>
+<br></p>
+<h3 id="22-create-the-markdown-file">2.2) Create the Markdown file</h3>
+<p>Under the <code>subcategory</code> folder create your new Markdown file.</p>
+<p>Example:</p>
+<pre><code class="language-text">└── content/pages/
+    ├── python.md                 #  python category Markdown file
+    └── python/                   #  python category folder
+        ├── python-tips.md        #  python-tips subcategory Markdown file
+        └── python-tips/          #  python-tips subcategory folder
+            └── my-python-tip.md  #  {NEW} python tip Markdown file
+</code></pre>
+<p>Here we create a <code>my-python-tip.md</code> file under <code>content/pages/python/python-tips/</code>.</p>
+<p>The Markdown file:</p>
+<ul>
+<li>should have the <code>Template</code> metadata set to to <code>wiki_leaf_page</code></li>
+<li>the body of the file should be contain the information you want to share</li>
+</ul>
+<pre><code class="language-yaml">Title: &lt;NAME OF YOUR PAGE example: Python snippet for finding ...&gt;
+Date: &lt;DATE example: 01-01-20 16:40&gt; 
+Description: wiki_leaf_page
+
+</code></pre>
+<hr />
+<p><br>
+<br></p>
+<h3 id="3-test-your-change">3) Test your change</h3>
+<ul>
+<li>Test your changes by running the local server<ul>
+<li>Run server<ul>
+<li>on macOS/Linux run: <code>make devserver</code></li>
+<li>om Windows run: <code>start peldev.bat &amp;&amp; start pelserv.bat</code></li>
+</ul>
+</li>
+<li>Go to http://localhost:8000/</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><br>
+<br></p>
+<h3 id="4-create-a-pull-request">4) Create a Pull Request</h3>
+<ul>
+<li>Go to the <a href="https://github.com/techartorg/techartorg.github.io/pulls">Pull Request page for the TAO wiki</a>{:target="_blank"}</li>
+<li>Create a New Pull Request based on your fork of the Wiki</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

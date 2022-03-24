@@ -1,0 +1,9 @@
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row {
+    width: 100%;
+    min-width: 2000px;
+}
